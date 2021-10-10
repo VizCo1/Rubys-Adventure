@@ -485,6 +485,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3144620856721043032, guid: 7e29e39f7d2c98e45887e792ec9a3f72, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3144620856721043034, guid: 7e29e39f7d2c98e45887e792ec9a3f72, type: 3}
       propertyPath: m_Name
       value: SmokeEffectSlow
