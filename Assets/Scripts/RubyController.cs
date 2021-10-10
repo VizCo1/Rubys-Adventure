@@ -24,12 +24,14 @@ public class RubyController : MonoBehaviour
 
     public GameObject projectilePrefab;
 
+    public ParticleSystem HitEffect;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
+        currentHealth = 1;
     }
 
     // Update is called once per frame
@@ -74,9 +76,12 @@ public class RubyController : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
+        
+
         if (amount < 0)
         {
             animator.SetTrigger("Hit");
+            Instantiate(HitEffect, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
             if (isInvincible)
                 return;

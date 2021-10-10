@@ -102,6 +102,7 @@ MonoBehaviour:
   maxHealth: 5
   timeInvincible: 2
   projectilePrefab: {fileID: 1328170484902115165, guid: 41bf924e6bef688498b100ee0ac04e7e, type: 3}
+  HitEffect: {fileID: 3753292916290003653, guid: 97888081296d0eb4f90a8811773f5d24, type: 3}
 --- !u!50 &-4767491110484533813
 Rigidbody2D:
   serializedVersion: 4
