@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+Audiosource audiosource;
 
 public class RubyController : MonoBehaviour
 {
@@ -31,7 +32,9 @@ public class RubyController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        currentHealth = 5;
+        currentHealth = maxHealth;
+        audiosource = GetComponent<audiosource>();
+
     }
 
     // Update is called once per frame
@@ -104,6 +107,11 @@ public class RubyController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
         //Debug.Log(currentHealth + "/" + maxHealth);
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 
     void Launch()
