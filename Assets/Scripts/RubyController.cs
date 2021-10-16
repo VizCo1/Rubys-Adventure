@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-Audiosource audiosource;
+
 
 public class RubyController : MonoBehaviour
 {
+    Audiosource audiosource;
     public float speed = 3.0f;
 
     public int maxHealth = 5;
@@ -33,7 +34,8 @@ public class RubyController : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
-        audiosource = GetComponent<audiosource>();
+
+        audioSource = GetComponent<audioSource>();
 
     }
 
