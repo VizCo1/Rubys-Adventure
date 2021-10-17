@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c649b7dc4037c43aea71d5e2195f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotClip: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
   speed: 3
   maxHealth: 5
   timeInvincible: 2

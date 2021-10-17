@@ -5,6 +5,8 @@ using UnityEngine;
 public class RubyController : MonoBehaviour
 {
     AudioSource audioSource;
+    public AudioClip shotClip;
+
     public float speed = 3.0f;
 
     public int maxHealth = 5;
@@ -123,5 +125,6 @@ public class RubyController : MonoBehaviour
         projectile.Launch(lookDirection, 300);
 
         animator.SetTrigger("Launch");
+        PlaySound(shotClip);
     }
 }
