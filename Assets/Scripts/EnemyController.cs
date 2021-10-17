@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+
+    public AudioClip damageClip;
+
     public float speed;
     public bool vertical;
     public float changeTime = 3.0f;
@@ -18,6 +21,8 @@ public class EnemyController : MonoBehaviour
 
     public ParticleSystem smokeEffect;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +36,7 @@ public class EnemyController : MonoBehaviour
         if (!broken)
         {
             return;
+             
         }
 
         timer -= Time.deltaTime;
@@ -74,6 +80,8 @@ public class EnemyController : MonoBehaviour
         if (player != null)
         {
             player.ChangeHealth(-1);
+
+            player.PlaySound(damageClip);
         }
     }
 
